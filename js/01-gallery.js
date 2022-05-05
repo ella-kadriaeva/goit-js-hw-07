@@ -27,13 +27,15 @@ function createGalleryMarkup(galleryItems) {
 galleryContainer.insertAdjacentHTML('beforeend', galleryMarkup);
 galleryContainer.addEventListener('click', getImage);
 
+
+
 function getImage(event) {
     event.preventDefault();
     if (event.target.nodeName !== 'IMG') {
       return
     };
+
    const currentImage = event.target.dataset.source; 
-   console.log(currentImage);
    onShowPicture (currentImage);    
 
 }
@@ -43,8 +45,6 @@ function onShowPicture (currentImage) {
     <img src="${currentImage}" width="800" height="600">
 `).show();  
 }
-
-
 
 
 
